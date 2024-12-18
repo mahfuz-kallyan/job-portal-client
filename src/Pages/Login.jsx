@@ -3,9 +3,15 @@ import loginLottie from '../assets/Lottie/login.json'
 import { useContext } from 'react';
 import AuthContext from '../Context/AuthContext/AuthContext';
 import SocialLogin from './Shared/SocialLogin';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const { loginUser } = useContext(AuthContext)
+	const { loginUser } = useContext(AuthContext)
+	const location = useLocation();
+	const navigate = useNavigate();
+	
+	const from = location?.state || '/';
+	
     const handleLogin = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -15,7 +21,8 @@ const Login = () => {
 
         loginUser(email, password)
             .then(result => {
-                console.log(result.user);
+				console.log(result.user);
+				navigate(from);
             })
             .catch(err => console.log(err.message)
             )
@@ -23,7 +30,7 @@ const Login = () => {
     }
     return (
 		<div>
-			<div className="hero bg-base-200 min-h-screen">
+			<div className="hero bg-base-200 min-h-screen py-12">
 				<div className="hero-content flex-col lg:flex-row-reverse">
 					<div className="text-center lg:text-left w-96">
 						<Lottie animationData={loginLottie}></Lottie>

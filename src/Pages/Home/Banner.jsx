@@ -7,19 +7,19 @@ import image2 from '../../assets/images/young-men-women-sitting-office-working-l
 const Banner = () => {
 	return (
 		<div>
-			<div className="hero bg-base-200 min-h-96">
+			<div className="hero bg-base-200 min-h-96 px-8">
 				<div className="hero-content flex-col lg:flex-row-reverse">
 					<div className="flex-1">
 						<motion.img
-                            src={image1}
-                            animate={{ y: [50, 100, 50] }}
-                            transition={{ duration: 10, repeat: Infinity }}
+							src={image1}
+							animate={{ y: [50, 100, 50] }}
+							transition={{ duration: 10, repeat: Infinity }}
 							className="max-w-sm w-64 rounded-t-[36px] rounded-br-[36px] border-l-8 border-b-8 border-blue-600 shadow-2xl"
 						/>
 						<motion.img
-                            src={image2}
-                            animate={{ x: [100, 150, 100] }}
-                            transition={{ duration: 10, repeat: Infinity }}
+							src={image2}
+							animate={{ x: [100, 150, 100] }}
+							transition={{ duration: 10, repeat: Infinity }}
 							className="max-w-sm w-64 rounded-t-[36px] rounded-br-[36px] border-l-8 border-b-8 border-blue-600 shadow-2xl"
 						/>
 					</div>
