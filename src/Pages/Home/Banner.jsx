@@ -25,7 +25,7 @@ const Banner = () => {
 					</div>
 					<div className="flex-1">
 						<motion.h1
-							animate={{ x: 50, color: ["blue"] }}
+							animate={{ x: 50, color: ["gray-800"] }}
 							transition={{
 								duration: 2,
 								delay: 1,
@@ -39,7 +39,7 @@ const Banner = () => {
 								animate={{
 									color: ["#ecff33", "#33ffe3", "#ff6133"],
 								}}
-								transition={{ duration: 1.5, repeat: Infinity }}
+								transition={{ duration: 2, repeat: Infinity }}
 							>
 								jobs
 							</motion.span>{" "}
@@ -50,7 +50,7 @@ const Banner = () => {
 							fugiat ut assumenda excepturi exercitationem quasi.
 							In deleniti eaque aut repudiandae et a id nisi.
 						</p>
-						<button className="btn btn-primary">Get Started</button>
+						<button className="btn btn-neutral">Get Started</button>
 					</div>
 				</div>
 			</div>

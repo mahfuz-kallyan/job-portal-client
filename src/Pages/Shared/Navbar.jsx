@@ -21,14 +21,15 @@ const Navbar = () => {
 			<li>
 				<NavLink to={"/"}>Home</NavLink>
 			</li>
-			<NavLink>
-				<li></li>
-			</NavLink>
+			<li>
+				<NavLink to={"/myApplications"}>My Applications</NavLink>
+			</li>
+			
 		</>
 	);
 	return (
         <div>
-			<div className="navbar bg-cyan-500 py-6 px-8">
+			<div className="navbar bg-red-500 py-6 px-8">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<div
@@ -53,7 +54,7 @@ const Navbar = () => {
 						</div>
 						<ul
 							tabIndex={0}
-							className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+							className="menu  menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
 						>
 							{links}
 						</ul>
@@ -64,7 +65,9 @@ const Navbar = () => {
 					</a>
 				</div>
 				<div className="navbar-center hidden lg:flex">
-					<ul className="menu menu-horizontal px-1">{links}</ul>
+					<ul className="menu menu-horizontal px-1 gap-2">
+						{links}
+					</ul>
 				</div>
 				<div className="navbar-end gap-4">
 					{user ? (
@@ -75,11 +78,11 @@ const Navbar = () => {
 						<div className="flex justify-center items-center gap-4">
 							<Link to={"/login"}>
 								{" "}
-								<button className="btn">Sign In</button>{" "}
+								<button className="btn btn-neutral">Sign In</button>{" "}
 							</Link>
 							<Link to={"/register"}>
 								{" "}
-								<button className="btn">Register</button>
+								<button className="btn btn-neutral">Register</button>
 							</Link>
 						</div>
 					)}

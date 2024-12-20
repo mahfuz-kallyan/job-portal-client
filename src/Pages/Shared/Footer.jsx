@@ -4,7 +4,7 @@ import icon from '../../assets/icons/icons8-job-application-64.png'
 const Footer = () => {
 	return (
 		<div className="mt-14">
-			<footer className="footer bg-cyan-600 text-base-content p-10">
+			<footer className="footer bg-red-500 text-base-content p-10">
 				<aside>
 					<img src={icon} alt="" />
 					<p>

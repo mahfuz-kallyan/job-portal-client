@@ -21,7 +21,7 @@ const HotJobsCard = ({ job }) => {
 	} = job;
 
 	return (
-		<div className="card card-compact bg-base-100 shadow-xl p-2 mt-12">
+		<div className="card card-compact bg-gray-300 shadow-xl p-2 mt-12">
 			<div className="flex items-center gap-2 p-2">
 				<figure>
 					<img className="w-14" src={company_logo} alt="Shoes" />
@@ -41,18 +41,18 @@ const HotJobsCard = ({ job }) => {
 				<p>{description}</p>
 				<div className="flex gap-2 flex-wrap">
 					{requirements.map((skill, index) => (
-						<p key={index} className="border-2 p-1 text-center rounded-md hover:text-blue-700 hover:bg-gray-400">
+						<p key={index} className="border-2 border-gray-700 p-1 text-center rounded-md hover:text-blue-700 hover:bg-gray-400">
 							{skill}
 						</p>
 					))}
 				</div>
-				<div className="card-actions justify-end mt-4 items-center">
+				<div className="card-actions justify-center mt-4 items-center">
 					<p>
 						Salary: {salaryRange.min} - {salaryRange.max}{" "}
 						{salaryRange.currency}
 					</p>
 					<Link to={`/jobs/${_id}`}>
-						<button className="btn btn-primary">Apply</button>
+						<button className="btn btn-neutral mt-4 hover:bg-gray-200">Apply</button>
 					</Link>
 				</div>
 			</div>
